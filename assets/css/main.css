@@ -1,0 +1,411 @@
+.header{
+    height: 48px;
+    background-color: var(--black-color);
+    position: fixed;
+    z-index: 3;
+    right: 0;
+    top: 0;
+    left: 0;
+}
+.header__navbar{
+    min-height: 48px;
+    display: flex;
+    justify-content: space-between;
+    line-height: 48px;
+}
+.header__navbar-list{
+    margin: 0;
+    list-style: none;
+    padding-left: 0;
+}
+.header__navbar-item{
+    display: block;
+    padding: 0 24px;
+    height: 48px;
+    text-align: center;
+}
+.header__navbar-link{
+    display: block;
+    color: var(--white-color);
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+.header__navbar-list .header__navbar-item{
+    display: inline-block;
+}
+.header__navbar-link-more-icon{
+    font-size: 1.5rem;
+    color: var(--white-color);
+}
+.header__navbar-item:hover {
+    background-color: #ccc;
+}
+.header__navbar-item:hover .header__navbar-link{
+    color: var(--black-color);
+}
+.header__navbar-menu,
+.header__navbar-search{
+    padding: 0 30px;
+    height: 48px;
+    background-color: transparent;
+    border: none;
+}
+.header__navbar-menu:hover{
+    background-color: red;
+}
+.header__navbar-search:hover{
+    background-color: red;
+}
+.header__navbar-menu-icon,
+.header__navbar-search-icon{
+    font-size: 1.5rem;
+    color: var(--white-color);
+}
+.header__navbar-more{
+    display: block;
+    position: relative;
+}
+.header__navbar-more:hover .header__navbar-more-list{
+    display: block;
+}
+.header__navbar-more:hover ~.header__navbar-merch{
+    margin-top: 150px;
+}
+.header__navbar-more-list{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    list-style: none;
+    background-color: var(--white-color);
+    text-align: left;
+    padding-left: 0;
+    border: 1px solid #ccc;
+    display: none;
+}
+.header__navbar-more-item{
+    width: 180px;
+    padding-left: 20px;
+}
+.header__navbar-more-item:hover{
+    background-color: #ccc;
+}
+.header__navbar-more-link{
+    display: block;
+    text-decoration: none;
+    color: var(--black-color);
+    font-size: 1.5rem;
+}
+.slider{
+    margin-top: 48px;
+    position: relative;
+    width: 100%;
+    padding-top: 50%;
+    background: url(https://www.w3schools.com/w3images/chicago.jpg) top center / contain no-repeat;
+}
+.slider-content{
+    position: absolute;
+    text-align: center;
+    bottom: 5%;
+    right: 0;
+    left: 0;
+    color: var(--white-color);
+}
+.slider-content__heading{
+    font-size: 2.4rem;
+}
+.slider-content__description{
+    font-size: 1.8rem;
+}
+.content-container{
+    max-width: 2000px;
+    margin: 0 auto;
+}
+.content-section{
+    padding: 64px 16px;
+    max-width: 800px;
+    margin: 0px auto;
+    text-align: center;
+}
+
+.content-body{
+    text-align: justify;
+    font-size: 1.5rem;
+    margin: 15px 0;
+    line-height: 1.4;
+    letter-spacing: -0.04px;
+}
+
+.members{
+    padding: 32px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.member-info__img{
+    width: 153.58px;
+    height: auto;
+}
+.member-info__name{
+    font-size: 1.5rem;
+    margin: 15px 0;
+    line-height: 1.5rem;
+}
+.tour-dates{
+    background-color: var(--black-color);
+    color: var(--white-color);
+}
+.tour-dates__list{
+    margin-top: 40px;
+    position: relative;
+    list-style: none;
+    padding-left: 0;
+    text-align: left;
+    background-color: var(--white-color);
+}
+.tour-dates__ticket{
+    position: relative;
+    color: var(--black-color);
+    padding: 6px 16px;
+    font-size: 1.5rem;
+    line-height: 24.5px;
+    border: 0.1px solid #dddcdc;
+}
+.tour-dates__ticket--sold-out::before{
+    position: absolute;
+    right: 5%;
+    content: "Sold out";
+    display: block;
+    background-color: red;
+    font-size: 1.5rem;
+    line-height: 24.5px;
+    padding: 0px 6px;
+    color: var(--white-color);
+    border-radius: 2px;
+}
+.tour-dates__ticket-number{
+    position: absolute;
+    right: 6%;
+    background-color: var(--black-color);
+    color: var(--white-color);
+    padding: 0 10px;
+    border-radius: 45%;
+}
+.tour-places{
+    width: 100%;
+    text-align: left;
+    padding: 32px 0;
+}
+.tour-place{
+    width: 100%;
+    background-color: var(--white-color);
+    color: var(--black-color);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+.tour-place__img{
+    width: 100%;
+}
+.tour-place__img:hover{
+    filter: brightness(50%);
+}
+.tour-place__location{
+    padding-left: 10px;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+.tour-place__time{
+    padding-left: 10px;
+    opacity: 70%;
+    font-size: 1.5rem;
+}
+.tour-place__discription{
+    padding-left: 10px;
+    font-size: 1.5rem;
+}
+.buy-tickets{
+    padding-left: 10px;
+    background-color: var(--black-color);
+    border: none;
+    color: var(--white-color);
+    margin: 10px 10px;
+    padding: 10px 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.buy-tickets:hover{
+    background-color: #ccc;
+    color: var(--black-color);
+}
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    display: none;
+}
+.open{
+    display: flex;
+}
+.modal-form{
+    background-color: var(--white-color);
+    margin: auto;
+    width: 900px;
+    max-width: 100%;
+    text-align: center;
+    animation: animatetop ease-out 0.4s;
+}
+.modal-form__heading{
+    width: 100%;
+    background-color: #009688;
+    color: var(--white-color);
+    font-size: 3.0rem;
+    line-height: 45px;
+    font-weight: 500;
+    letter-spacing: 5px;
+    text-align: center;
+    padding: 42px 0;
+    margin: 0;
+}
+.modal-form__heading-icon{
+    margin-right: 10px;
+}
+.modal-form__container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 0 16px;
+}
+.modal-form__label{
+    font-size: 1.5rem;
+    padding: 15px 0;
+    text-align: left;
+}
+.modal-form__input{
+    font-size: 1.5rem;
+    padding: 10px;
+}
+.modal-form__pay{
+    display: block;
+    margin: 16px;
+    padding: 16px 0;
+    font-size: 15px;
+    line-height: 22.5px;
+    font-weight: 400;
+    width: calc(100% - 32px);
+    border: none;
+    background-color: #009688;
+    color: var(--white-color);
+}
+.modal-form__pay-icon{
+    margin-left: 5px;
+    font-weight: 700 !important;
+}
+.modal-form-footer{
+    margin: 16px 16px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 160px;
+    margin-bottom: 20px;
+}
+.modal-form-footer__close{
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+    padding: 8px 16px;
+    border: none;
+    background-color: red;
+    color: var(--white-color);
+    cursor: pointer;
+}
+.modal-form-footer__help{
+    font-size: 1.5rem;
+}
+.modal-form-footer__help-link{
+    font-size: 1.5rem;
+    color: rgb(12, 170, 243);
+    font-weight: 500;
+    font-style: oblique;
+}
+.contact-info{
+    font-size: 1.5rem;
+    line-height: 30px;
+}
+
+.contact-form__name{
+    font-size: 1.4rem;
+    padding: 8px 0 8px 8px;
+    max-width: 100%;
+}
+.flex-display{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+.contact-form__email{
+    font-size: 1.4rem;
+    padding: 10px 0 10px 8px;
+    max-width: 100%;
+}
+.contact-form__message{
+    font-size: 1.4rem;
+    padding: 10px 0 10px 8px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+.icon{
+    margin-right: 20px;
+}
+.contact{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.map{
+    width: 100%;
+    height: auto;
+    filter: grayscale(50%);
+}
+.footer{
+    text-align: center;
+    padding: 64px 0;
+}
+.iconlink{
+    font-size: 2.4rem;
+    text-decoration: none;
+    color: rgb(88, 81, 81);
+}
+.footer-copyright{
+    font-size: 1.8rem;
+    line-height: 22.5px;
+    color: var(--black-color);
+    font-weight: 500;
+}
+.copyright-link{
+    color: rgb(3, 170, 221);
+    text-decoration: none;
+}
+.contact-form{
+    position: relative;
+}
+.contact-form__button-send{
+    display: block;
+    position: absolute;
+    background-color: var(--black-color);
+    color: var(--white-color);
+    font-size: 1.5rem;
+    border: none;
+    padding: 10px 20px;
+    right: 0;
+    cursor: pointer;
+}
+.contact-form__button-send:hover{
+    background-color: #ccc;
+    color: var(--black-color);
+}

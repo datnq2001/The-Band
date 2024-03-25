@@ -1,0 +1,81 @@
+@media (min-width: 740px) {
+    .header__navbar-menu{
+        display: none;
+    }
+    .header__navbar-list .header__navbar-merch{
+        display: none;
+    }
+}
+@media (max-width: 740px) {
+    .header__navbar-list .header__navbar-item {
+        display: block;
+    }
+    .header__navbar-search{
+        display: none;
+    }
+    .header{
+        overflow: hidden;
+    }
+    .header__navbar-item{
+        text-align: left;
+    }
+    /* .header__navbar-list .header__navbar-more{
+        display: none;
+    } */
+    .members{
+        display: block;
+    }
+    .member-info__img{
+        width: 278px;
+        margin-bottom: 15px;
+    }
+    .grid__column{
+        width: 464px;
+    }
+    .grid__row{
+        display: block;
+    }
+    .contact-info{
+       padding-bottom: 10px;
+    }
+    .contact-form{
+        padding-top: 10px;
+        width: 100%;
+     }
+    .contact-info__style{
+        margin: 0;
+    }
+    .contact-form__message{
+        padding-top: 10px;
+    }
+    .flex-display{
+        flex-direction: column;
+    }
+    .contact{
+        margin: 30px 0 40px 0;
+    }
+    .header__navbar{
+        display: block;
+    }
+    .header__navbar-item:first-child{
+        display: inline-block;
+    }
+    .header__navbar-menu{
+        position: absolute;
+        top:0;
+        right: 0;
+    }
+    .header__navbar-more-list{
+        width: 100%;
+    }
+    .header__navbar-more-item{
+        width: 100%;
+        padding-left: 50px;
+    }
+    .header__navbar-more:focus ~.header__navbar-more-list{
+        display: block;
+    }
+    .header__navbar-more:focus ~.header__navbar-merch{
+        margin-top: 150px;
+    }
+}
