@@ -78,4 +78,7 @@
     .header__navbar-more:focus ~.header__navbar-merch{
         margin-top: 150px;
     }
+    .grid__column--half{
+        width: 100%;
+    }
 }
