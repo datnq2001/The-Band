@@ -100,7 +100,7 @@
     position: relative;
     width: 100%;
     padding-top: 50%;
-    background: url(https://www.w3schools.com/w3images/chicago.jpg) top center / contain no-repeat;
+    background: url(https://i.pinimg.com/originals/6d/1d/ae/6d1dae7e2fc7088d21e00c3d9b93cf82.png) top center / contain no-repeat;
 }
 .slider-content{
     position: absolute;
@@ -143,7 +143,9 @@
 }
 .member-info__img{
     width: 153.58px;
-    height: auto;
+    height: 300px;
+    object-fit: cover;
+    object-position: bottom center;
 }
 .member-info__name{
     font-size: 1.5rem;

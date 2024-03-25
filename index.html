@@ -68,21 +68,25 @@
         <div class="app-container" id="band">
             <div class="content-container">
                 <div class="content-section">
-                    <h1 class="content-heading">THE BAND</h1>
+                    <h1 class="content-heading">BLACK PINK</h1>
                     <p class="content-sub-heading">We love music</p>
                     <p class="content-body">We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                     <div class="members">
                         <div class="member-info">
-                            <p class="member-info__name">Name</p>
-                            <img src="assets\img\bandmember.jpg" alt="" class="member-info__img">
+                            <p class="member-info__name">JENNIE</p>
+                            <img src="https://i.pinimg.com/originals/4e/59/53/4e5953dd69bd8d41ee56c09a055f0a69.jpg" alt="" class="member-info__img">
                         </div>
                         <div class="member-info">
-                            <p class="member-info__name">Name</p>
-                            <img src="assets\img\bandmember.jpg" alt="" class="member-info__img">
+                            <p class="member-info__name">JISOO</p>
+                            <img src="https://i.pinimg.com/originals/c8/40/5b/c8405b236c9b8d03d551386e7c04a9db.jpg" alt="" class="member-info__img">
                         </div>
                         <div class="member-info">
-                            <p class="member-info__name">Name</p>
-                            <img src="assets\img\bandmember.jpg" alt="" class="member-info__img">
+                            <p class="member-info__name">ROSÉ</p>
+                            <img src="https://i.pinimg.com/originals/78/58/64/785864b0c2318a809bc2c5ee2488a32d.jpg" alt="" class="member-info__img">
+                        </div>
+                        <div class="member-info">
+                            <p class="member-info__name">LISA</p>
+                            <img src="https://kenh14cdn.com/thumb_w/660/203336854389633024/2023/4/3/t64c-16805331988611813629379.jpg" alt="" class="member-info__img">
                         </div>
                     </div>
                 </div>
@@ -304,5 +308,76 @@
             event.preventDefault();
         });
     </script>
+
+    <script>
+        var images = [
+            "https://i.pinimg.com/originals/e2/dc/f9/e2dcf95ec74e342f44555a834a06ccfd.jpg",
+            "https://i.pinimg.com/originals/78/25/90/78259083c0bf5aecacf2fe74dd220245.jpg",
+            "https://i.pinimg.com/originals/3a/aa/d3/3aaad3e17f0b48f568cbb1d4be1f6187.png",
+            "assets/img/jisoo-flower-4k-wallpaper-uhdpaper.com-260@1@k.jpg",
+            "assets/img/rose-on-the-ground-blackpink-uhdpaper.com-4K-7.3317.jpg"
+        ];
+        var sliderData = [
+        {
+            image: "https://i.pinimg.com/originals/e2/dc/f9/e2dcf95ec74e342f44555a834a06ccfd.jpg",
+            heading: "Los Angeles",
+            description: "Thank you, Los Angeles - A night we won't forget."
+        },
+        {
+            image: "https://i.pinimg.com/originals/78/25/90/78259083c0bf5aecacf2fe74dd220245.jpg",
+            heading: "New York",
+            description: "Thank you, New York - A night we won't forget."
+        },
+        {
+            image: "https://i.pinimg.com/originals/3a/aa/d3/3aaad3e17f0b48f568cbb1d4be1f6187.png",
+            heading: "Tokyo",
+            description: "Thank you, Tokyo - A night we won't forget."
+        },
+        {
+            image: "assets/img/jisoo-flower-4k-wallpaper-uhdpaper.com-260@1@k.jpg",
+            heading: "Seoul",
+            description: "Thank you, Seoul - A night we won't forget."
+        },
+        {
+            image: "assets/img/rose-on-the-ground-blackpink-uhdpaper.com-4K-7.3317.jpg",
+            heading: "Paris",
+            description: "Thank you, Paris - A night we won't forget."
+        },
+        
+        // Thêm các đối tượng dữ liệu khác tương tự ở đây cho các ảnh khác
+    ];
+        var currentImageIndex = 0;
+        var intervalID;
+    
+        function startSlideshow() {
+            intervalID = setInterval(nextImage, 3000);
+        }
+    
+        function stopSlideshow() {
+            clearInterval(intervalID);
+        }
+    
+        function prevImage() {
+            currentImageIndex = (currentImageIndex - 1 + sliderData.length) % sliderData.length;
+        }
+    
+        function nextImage() {
+            currentImageIndex = (currentImageIndex + 1) % sliderData.length;
+            updateImage();
+        }
+    
+        function updateImage() {
+            var imgElement = document.querySelector('.slider');
+            var sliderContent = document.querySelector('.slider-content');
+        
+            imgElement.style.backgroundImage = `url(${sliderData[currentImageIndex].image})`;
+            sliderContent.querySelector('.slider-content__heading').textContent = sliderData[currentImageIndex].heading;
+            sliderContent.querySelector('.slider-content__description').textContent = sliderData[currentImageIndex].description;
+        }
+    
+        startSlideshow(); // Start the slideshow
+    </script>
+    
+    
 </body>
 </html>
