@@ -26,11 +26,11 @@
         display: block;
     }
     .member-info__img{
-        width: 278px;
+        max-width: 100%;
         margin-bottom: 15px;
     }
     .grid__column{
-        width: 464px;
+        width: 100%;
     }
     .grid__row{
         display: block;
